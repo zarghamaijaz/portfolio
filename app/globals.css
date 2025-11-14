@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #ffffff;
+  --background: #171717;
+  --elements: #1f2630e3;
+  --clr-primary: #ffffff;
+  --clr-dawn-orange: #F3904F;
+  --clr-dawn-blue: #3B4371;
 }
 
 @theme inline {
+  --color-dawn-orange: var(--clr-dawn-orange);
+  --color-dawn-blue: var(--clr-dawn-blue);
   --color-background: var(--background);
+  --color-elements: var(--elements);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-heading: var(--font-playfair-display);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Override */
+
+button:hover{
+  cursor: pointer;
+}
+/* For more control we are using css instead of tailwind */
+.button-effect-parent:hover .button-effect-child,
+.button-effect-parent:focus-within .button-effect-child{
+  opacity: .6;
+}
+
+
+
+/* Animations */
+
+.fade-in-pop{
+  animation: fade-in-pop .5s cubic-bezier(0.01, 0.23, 1, 1.26);
+}
+
+@keyframes fade-in-pop {
+  from{
+    opacity: 0;
+    transform: scale(0);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.animate-shine{
+  animation: animate-shine 5s ease-in infinite;
+}
+
+@keyframes animate-shine {
+  0%{
+    transform: translateX(-100%);
+  }
+  15%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
 }

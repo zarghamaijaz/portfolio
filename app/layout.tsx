@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const inter = Inter({
+  variable: "--font-inter",
+  weight: [ "100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
 });
 
@@ -25,9 +29,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} ${playfairDisplay.variable} antialiased flex flex-col min-h-screen relative isolate`}
       >
-        {children}
+        <div className="h-[35vw] w-[35vw] absolute top-0 left-0 -z-10 overflow-hidden">
+          <div className="h-full w-full bg-dawn-orange rounded-full translate-x-[-50%] translate-y-[-50%] blur-3xl opacity-25"></div>
+        </div>
+        <header>Space for header</header>
+        <div className="flex-1 px-4">
+          {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );
