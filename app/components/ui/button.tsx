@@ -1,12 +1,31 @@
+"use client";
 import React from "react";
+import { redirect } from "next/navigation";
 
-const Button = ({ children, large }: { children: React.ReactNode, large?: boolean }) => {
+const Button = ({ children, variant, large, className, disabled, tooltip, onClick, link }:
+  { children: React.ReactNode, variant?: string, large?: boolean, className?: string, disabled?: boolean, tooltip?: string, onClick?: () => void, link?: string }) => {
+
+  const classByVariant = 
+    variant === "primary" ? "bg-dawn-orange" :
+    variant === "secondary" ? "bg-dawn-blue text-foreground" :
+    variant === "gradient" ? "bg-linear-to-r from-dawn-orange to-dawn-blue" :
+    "text-background bg-foreground";
+
+    const effectByVariant =
+    variant === "primary" ? "bg-dawn-blue" :
+    variant === "secondary" ? "bg-dawn-orange" :
+    variant === "gradient" ? "bg-foreground" :
+    "bg-linear-to-r from-dawn-orange to-dawn-blue";
+
   return (
-    <div className="p-1 w-fit relative button-effect-parent">
-      <div className="bg-linear-to-r from-dawn-orange to-dawn-blue rounded-lg absolute inset-0 blur-[3px] opacity-0 transition-opacity duration-200 button-effect-child"></div>
-      <button className={`${large ? "px-6 py-3 text-md" : "px-4 py-2 text-sm"} text-background bg-foreground rounded-md relative`}>
+    <div className={`${tooltip && "group"} p-1 w-fit relative button-effect-parent`}>
+      <div className={`${effectByVariant} rounded-lg absolute inset-0 blur-[3px] opacity-0 transition-opacity duration-200 button-effect-child`}></div>
+      <button disabled={disabled} onClick={ link ? () => redirect(link) : onClick} className={`${disabled ? "opacity-50 cursor-not-allowed" : ""} ${large ? "px-6 py-3 text-md" : "px-4 py-2 text-sm"} ${className} ${classByVariant} text-background rounded-md relative`}>
         {children}
       </button>
+      {tooltip && (
+        <div className="hidden group-hover:flex z-10 absolute w-screen max-w-[300px] min-h-full bottom-full left-0 bg-foreground text-background justify-center items-center rounded-md text-xs p-2">{tooltip}</div>
+      )}
     </div>
   );
 };

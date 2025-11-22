@@ -3,49 +3,8 @@
 import Image from "next/image"
 import PerspectiveGrid from "./perspective-grid"
 import { useRef, useEffect, useState } from "react"
+import { TECHNOLOGIES_LIST } from "@/constants"
 
-const TECHNOLOGIES_LIST = [
-    {
-        name: "HTML",
-        icon: "/icons/html.png",
-    },
-    {
-        name: "CSS",
-        icon: "/icons/css.svg",
-    },
-    {
-        name: "JavaScript",
-        icon: "/icons/javascript.png",
-    },
-    {
-        name: "TypeScript",
-        icon: "/icons/typescript.png",
-    },
-    {
-        name: "React",
-        icon: "/icons/react.svg",
-    },
-    {
-        name: "Next.js",
-        icon: "/icons/nextjs.png",
-    },
-    {
-        name: "TailwindCSS",
-        icon: "/icons/tailwindcss.png",
-    },
-    {
-        name: "Node.js",
-        icon: "/icons/node.png",
-    },
-    {
-        name: "MongoDB",
-        icon: "/icons/mongodb.webp",
-    },
-    {
-        name: "PostgreSQL",
-        icon: "/icons/postgresql.png",
-    },
-]
 
 const TechnologyCard = ({name, icon}:{
     name: string,

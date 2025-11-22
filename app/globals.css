@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth; /* supported in modern Chrome, Firefox, Edge, Opera, and Safari 15+ */
+}
+
 :root {
   --foreground: #ffffff;
   --background: #171717;
+  --header: #ffffff17;
   --elements: #1f2630e3;
   --clr-primary: #ffffff;
   --clr-dawn-orange: #F3904F;
@@ -13,6 +18,7 @@
   --color-dawn-orange: var(--clr-dawn-orange);
   --color-dawn-blue: var(--clr-dawn-blue);
   --color-background: var(--background);
+  --color-header: var(--header);
   --color-elements: var(--elements);
   --color-foreground: var(--foreground);
   --font-heading: var(--font-playfair-display);
@@ -68,4 +74,43 @@ button:hover{
   100%{
     transform: translateX(100%);
   }
+}
+
+.animate-rotating-gradient{
+  background: conic-gradient(
+    from 0deg,
+    var(--color-dawn-orange),
+    transparent 50%
+  );
+  animation: animate-rotating-gradient 5s linear infinite;
+}
+
+@keyframes animate-rotating-gradient {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+ 
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Toastify override */
+:root{
+  --toastify-color-success: var(--clr-dawn-orange);
+  --toastify-icon-color-success: var(--clr-dawn-orange);
 }

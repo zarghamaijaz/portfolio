@@ -2,13 +2,16 @@ import { Metadata } from "next";
 import Button from "@/app/components/ui/button";
 import Image from "next/image";
 import WorkedDomains from "@/app/components/worked-domains";
-import TechnologiesMatter from "@/app/components/technologies-matter";
+import TechnologiesMatter from "@/app/components/technologies-matter.jsx";
 import SectionInfo from "./components/section-info";
 import ToolsAndTechnologies from "./components/tools-and-technologies";
 import BannerBg from "./components/banner-bg";
 import ProjectsList from "./components/projects-list";
 import WorkExperience from "./components/work-experience";
 import WhyHireMe from "./components/why-hire-me";
+import ChangingText from "./components/ui/changing-text";
+import ProfessionalCard from "./components/professional-card";
+import LetsTalk from "./components/lets-talk";
 
 export const metadata: Metadata = {
   title: "Zargham's Portfolio",
@@ -27,13 +30,14 @@ export default function Home() {
             <SectionInfo
               badge="About me"
               title={
-                <>Hi, I'm Zargham. <br/>I build Websites and Web Apps.</>
+                <>Hi, I'm Zargham. <br/>I <ChangingText texts={["Design", "Develop"]}/> Websites and Web Apps.</>
               }
               description={
                 <>
                   I'm an engineer focusing on web development. <br/>
-                  I started as a front-end developer. Later on, I became a full-stack developer by learning Node.js and Next.js.<br/>
-                  Please take a look at my portfolio to see my web dev journey.
+                  I started as a front-end developer. I enjoyed my work and wanted to learn more.<br/>
+                  My curiosity led me to learn backend development.<br/>
+                  And now I am a full-stack developer.<br/>
                 </>
               }
             />
@@ -65,13 +69,13 @@ export default function Home() {
         <div className="container mx-auto">
           <SectionInfo
             title={<>
-              Not just creating interfaces, <br/>
-              Creating Experiences that Breathe Life.
+              Not just <span className="text-cyan-300">Interfaces,</span> <br/>
+              Creating <span className="text-cyan-300">Experiences</span> that Breathe Life.
             </>}
             description={
               <>
-                By using my modern technologies and my design knowledge, I create interfaces that are not only functional but also visually stunning. <br/>
-                Because user experience is everything. <br/><br/><br/>
+                By using my modern technologies and my design knowledge, I create interfaces that are not only functional but also visually stunning.
+                <br/><br/><br/>
                 <span className="text-dawn-orange">Drag and throw the icons below to see the magic.</span>
                 
               </>
@@ -87,8 +91,8 @@ export default function Home() {
               <SectionInfo
                 title={
                   <>
-                    Pixel Perfection <br/>
-                    Like it is meant to be.
+                    Pixel <span className="text-cyan-300">Perfection</span><br/>
+                    Like it is <span className="text-cyan-300">meant</span> to be.
                   </>
                 }
                 description={
@@ -111,7 +115,11 @@ export default function Home() {
       <section className="pt-[300px] relative">
         <div className="container mx-auto">
           <SectionInfo
-            title="My Tech Stack"
+            title={
+              <>
+                My <span className="text-cyan-300">Tech Stack</span>
+              </>
+            }
             description={
               <>
                 Over the years, I have worked with a wide range of technologies. Whether front-end or back-end.<br/>
@@ -122,7 +130,7 @@ export default function Home() {
         </div>
         <ToolsAndTechnologies />
       </section>
-      <section className="pt-[300px]">
+      <section id="projects" className="pt-[300px]">
         <div className="container mx-auto relative isolate">
           <div className="absolute inset-0 -z-10">
             <div className="h-[230px] w-[230px] absolute top-[-50px] left-[100px] rounded-full bg-linear-to-r from-dawn-orange to-dawn-blue blur-[50px] opacity-35"></div>
@@ -138,7 +146,7 @@ export default function Home() {
           <ProjectsList/>
         </div>
       </section>
-      <section className="pt-[300px] relative isolate">
+      <section id="experience" className="pt-[300px] relative isolate">
         <div className="absolute inset-0 flex items-end">
           <Image src="/svgs/banner-wave-2.svg" alt="Banner wave" width={500} height={200} className="w-full object-cover opacity-20" />
         </div>
@@ -162,7 +170,17 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <SectionInfo
-                title="Why Hire Me?"
+                title={
+                  <>
+                  Why <span className="text-cyan-300">Hire Me?</span>
+                  </>
+                }
+                description={
+                  <>
+                    Still curious why I would be the right person for your project?<br/>
+                    Here&apos;s a few things that make me stand out from the croud.<br/>
+                  </>
+                }
               />
             </div>
             <div>
@@ -174,6 +192,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <LetsTalk/>
     </>
   );
 }

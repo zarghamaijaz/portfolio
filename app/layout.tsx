@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
+import Header from "./components/header";
+import ToastProvider from "./components/toast-provider";
 
 
 const inter = Inter({
@@ -34,11 +36,12 @@ export default function RootLayout({
         <div className="h-[35vw] w-[35vw] absolute top-0 left-0 -z-10 overflow-hidden">
           <div className="h-full w-full bg-dawn-orange rounded-full translate-x-[-50%] translate-y-[-50%] blur-3xl opacity-25"></div>
         </div>
-        <header>Space for header</header>
+        <Header/>
         <div className="flex-1 px-4">
           {children}
         </div>
         <Footer/>
+        <ToastProvider/>
       </body>
     </html>
   );

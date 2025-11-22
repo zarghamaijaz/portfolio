@@ -1,65 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PositionAwareBgEffect from "./position-aware-bg-effect";
-
-const PROJECTS_LIST = [
-    {
-        name: "IT Asset Management System (ManageX)",
-        description: "Multitenant, RBAC, Asset management system developed for VaporVM",
-        image: "/images/projects/itam/main.png",
-        domain: "Asset management system",
-        href: "/",
-    },
-    {
-        name: "QaboolHai",
-        description: "An Islamic matrimony website made with React.js",
-        image: "/images/projects/qaboolhai/main.png",
-        domain: "Matrimony website",
-        href: "/",
-    },
-    {
-        name: "OneVibe API",
-        description: "A REST API for OneVibe app. Built using Node.js and PostgreSQL.",
-        image: "",
-        domain: "Matrimony website",
-        href: "/",
-    },
-    {
-        name: "Instant Cloud Support",
-        description: "A cloud support ticketing system for customers.",
-        image: "/images/projects/cloud-support/main.png",
-        domain: "IT support platform",
-        href: "/",
-    },
-    {
-        name: "DU Ticketing and Inventory System",
-        description: "Automated ticketing system for managing support tickets and updating inventory with logs.",
-        image: "/images/projects/mx-du/main.png",
-        domain: "Inventory management",
-        href: "/",
-    },
-    {
-        name: "Prostore",
-        description: "A fully featured Ecommerce platform. Built with Next.js and TailwindCSS.",
-        image: "/images/projects/prostore/main.png",
-        domain: "Ecommerce",
-        href: "https://prostore-jzlf.onrender.com/",
-    },
-    {
-        name: "Stelios Driving School",
-        description: "A webapp made for a client to manage their daily operations.",
-        image: "/images/projects/steliosdrivingschool/main.png",
-        domain: "Web Application",
-        href: "/",
-    },
-    {
-        name: "Social Media App",
-        description: "Social media platform made with Next.js.",
-        image: "",
-        domain: "Social media",
-        href: "/",
-    },
-]
+import { PROJECTS_LIST } from "@/constants";
 
 const ProjectCard = ({href, title, description, image, domain}: {href: string, title: string, description: string, image: string, domain: string}) => {
     return(

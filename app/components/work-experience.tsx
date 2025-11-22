@@ -1,29 +1,4 @@
-const EXPERIENCE = [
-    {
-        company: "VaporVM IT Services",
-        position: "Software Engineer",
-        duration: "2022 - Present",
-        jobType: "Full-time",
-    },
-    {
-        company: "QaboolHai ltd",
-        position: "React Developer",
-        duration: "2023 - 2024",
-        jobType: "Part-time",
-    },
-    {
-        company: "US Packaging Solutions",
-        position: "Frontend Developer",
-        duration: "2021 - 2022",
-        jobType: "Full-time",
-    },
-    {
-        company: "Nubrotech",
-        position: "Web Developer",
-        duration: "2020 - 2021",
-        jobType: "Internship",
-    },
-]
+import { EXPERIENCE } from "@/constants";
 
 
 
@@ -54,13 +29,17 @@ const WorkExperience = () => {
         <div className="mt-12">
             <div className="grid grid-cols-4 gap-8">
                 <div className="col-span-1">
-                    <div className="bg-elements px-4 py-8 text-center h-full">
-                        <h3 className="text-6xl mb-2 font-medium">4</h3>
-                        <p className="text-lg leading-[1.75em]">
-                            Years<br/>
-                            Experience<br/>
-                            Working<br/>
-                        </p>
+                    <div className="p-0.5 relative isolate overflow-hidden">
+                        {/* for rotaing border effect */}
+                        <div className="absolute inset-0 scale-[2] origin-center -z-10 animate-rotating-gradient"></div>
+                        <div className="bg-slate-800 px-4 py-8 text-center h-full">
+                            <h3 className="text-6xl mb-2 font-medium">4</h3>
+                            <p className="text-lg leading-[1.75em]">
+                                Years<br/>
+                                Experience<br/>
+                                Working<br/>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className="col-span-3 grid grid-cols-2 gap-6">
