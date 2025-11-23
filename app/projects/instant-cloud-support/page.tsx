@@ -6,14 +6,15 @@ import Image from "next/image";
 import { CONTRIBUTION, FEATURES } from "@/constants";
 import StyledList from "@/app/components/styled-list";
 import LetsTalk from "@/app/components/lets-talk";
+import BannerBg from "@/app/components/banner-bg";
 
-const { QABOOL_HAI } = CONTRIBUTION;
+const { INSTANT_CLOUD_SUPPORT } = CONTRIBUTION;
 
 export const metadata = {
-    title: "Zargham | QaboolHai"
+    title: "Zargham | Instant Cloud Support"
 };
 
-const QaboolHaiPage = () => {
+const InstantCloudSupportPage = () => {
   return (
     <>
       <section className="pt-[100px]">
@@ -21,20 +22,22 @@ const QaboolHaiPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <SectionInfo
-                badge="Matrimony Website"
+                badge="IT Support Platform"
                 title={
                   <>
-                    QaboolHai
+                    ICS (Instant Cloud Support)
                   </>
                 }
                 description={
                   <>
-                    QaboolHai is a Halal Matchmaking Platform where millions of young Muslim men and women, can find right Match.
+                    Instant Cloud Support (ICS) is an internal project of VaporVM. <br/>
+                    ICS focuses on providing a secure &amp; hastle-free cloud support to its customers.<br/>
+                    The platform follows a Service Request module to create tickets for customers and provide realtime project tracking.<br/>
                   </>
                 }
               />
               <div className="mt-8 flex gap-2">
-                <Button link="https://qaboolhai.com">Live Preview</Button>
+                <Button disabled tooltip="Live link cannot be shared publically because this is an internal project of VaporVM.">Live Preview</Button>
                 <Button link="#my-contribution" variant="primary">My Contribution</Button>
               </div>
             </div>
@@ -58,19 +61,19 @@ const QaboolHaiPage = () => {
         </div>
         <div className="container mx-auto">
           <StyledTitle>Features &amp; Details</StyledTitle>
-          <p className="text-gray-300 text-center mt-4">The following are the key features provided by QaboolHai</p>
+          <p className="text-gray-300 text-center mt-4">The following are the key features provided by the platform</p>
           <div className="mt-[100px]">
-            <StyledList data={FEATURES.QABOOL_HAI} />
+            <StyledList data={FEATURES.INSTANT_CLOUD_SUPPORT} />
           </div>
         </div>
       </section>
       <section className="pt-[300px]" id="my-contribution">
         <div className="container mx-auto">
           <StyledTitle>My Contribution</StyledTitle>
-          <p className="text-gray-300 text-center mt-4">I have worked part time on this project. Here are my key contributions.</p>
+          <p className="text-gray-300 text-center mt-4">I have architectured and developed the Frontend of the project.</p>
         </div>
         <div className="mt-[100px]">
-          <Timeline data={QABOOL_HAI}/>
+          <Timeline data={INSTANT_CLOUD_SUPPORT}/>
         </div>
       </section>
       <LetsTalk/>
@@ -78,4 +81,4 @@ const QaboolHaiPage = () => {
   );
 };
 
-export default QaboolHaiPage;
+export default InstantCloudSupportPage;

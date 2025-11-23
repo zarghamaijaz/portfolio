@@ -9,8 +9,8 @@ import {
 const WorkedDomains = () => {
   return (
 
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-start mt-[100px]">
-      <div className="p-4 grid grid-cols-5 gap-4 hover:bg-elements rounded-lg transition-all duration-200">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-8 items-start mt-[100px]">
+      <div className="col-span-4 lg:col-span-1 grid grid-cols-5 gap-4 rounded-lg">
         <div className="col-span-1">
           <SquareMousePointer className="w-[35px] h-auto text-cyan-300" />
         </div>
@@ -22,7 +22,7 @@ const WorkedDomains = () => {
           </p>
         </div>
       </div>
-      <div className="p-4 grid grid-cols-5 gap-4 hover:bg-elements rounded-lg transition-all duration-200">
+      <div className="col-span-4 lg:col-span-1 grid grid-cols-5 gap-4 rounded-lg">
         <div className="col-span-1">
           <ShoppingBag className="w-[35px] h-auto text-cyan-300" />
         </div>
@@ -34,7 +34,7 @@ const WorkedDomains = () => {
           </p>
         </div>
       </div>
-      <div className="p-4 grid grid-cols-5 gap-4 hover:bg-elements rounded-lg transition-all duration-200">
+      <div className="col-span-4 lg:col-span-1 grid grid-cols-5 gap-4 rounded-lg">
         <div className="col-span-1">
           <LayoutDashboard className="w-[35px] h-auto text-cyan-300" />
         </div>
@@ -47,7 +47,7 @@ const WorkedDomains = () => {
           </p>
         </div>
       </div>
-      <div className="p-4 grid grid-cols-5 gap-4 hover:bg-elements rounded-lg transition-all duration-200">
+      <div className="col-span-4 lg:col-span-1 grid grid-cols-5 gap-4 rounded-lg">
         <div className="col-span-1">
           <FileSliders className="w-[35px] h-auto text-cyan-300" />
         </div>

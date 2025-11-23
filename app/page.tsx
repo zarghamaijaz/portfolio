@@ -10,8 +10,8 @@ import ProjectsList from "./components/projects-list";
 import WorkExperience from "./components/work-experience";
 import WhyHireMe from "./components/why-hire-me";
 import ChangingText from "./components/ui/changing-text";
-import ProfessionalCard from "./components/professional-card";
 import LetsTalk from "./components/lets-talk";
+import CertificationsAndEducation from "./components/certifications-and-education";
 
 export const metadata: Metadata = {
   title: "Zargham's Portfolio",
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
       </section>
-      <section className="pt-[300px] relative isolate">
+      <section className="pt-[150px] lg:pt-[300px] relative isolate">
         <div className="absolute inset-0 -z-10 flex justify-end">
           <div className="h-[30vw] w-[30vw] rounded-full bg-linear-to-r from-dawn-orange to-dawn-blue blur-[100px] opacity-35 translate-x-[-50%]"></div>
         </div>
@@ -65,7 +65,7 @@ export default function Home() {
           <WorkedDomains/>
         </div>
       </section>
-      <section className="pt-[300px]">
+      <section className="pt-[150px] lg:pt-[300px]">
         <div className="container mx-auto">
           <SectionInfo
             title={<>
@@ -84,7 +84,7 @@ export default function Home() {
           <TechnologiesMatter/>
         </div>
       </section>
-      <section className="pt-[300px]">
+      <section className="pt-[150px] lg:pt-[300px]">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-[300px] relative">
+      <section className="pt-[150px] lg:pt-[300px] relative">
         <div className="container mx-auto">
           <SectionInfo
             title={
@@ -130,7 +130,7 @@ export default function Home() {
         </div>
         <ToolsAndTechnologies />
       </section>
-      <section id="projects" className="pt-[300px]">
+      <section id="projects" className="pt-[150px] lg:pt-[300px]">
         <div className="container mx-auto relative isolate">
           <div className="absolute inset-0 -z-10">
             <div className="h-[230px] w-[230px] absolute top-[-50px] left-[100px] rounded-full bg-linear-to-r from-dawn-orange to-dawn-blue blur-[50px] opacity-35"></div>
@@ -146,7 +146,7 @@ export default function Home() {
           <ProjectsList/>
         </div>
       </section>
-      <section id="experience" className="pt-[300px] relative isolate">
+      <section id="experience" className="pt-[150px] lg:pt-[300px] relative isolate">
         <div className="absolute inset-0 flex items-end">
           <Image src="/svgs/banner-wave-2.svg" alt="Banner wave" width={500} height={200} className="w-full object-cover opacity-20" />
         </div>
@@ -162,7 +162,20 @@ export default function Home() {
           <WorkExperience/>
         </div>
       </section>
-      <section className="pt-[300px] relative isolate">
+      <section id="certifications" className="pt-[150px] lg:pt-[300px]">
+        <div className="container mx-auto relative isolate">
+          <SectionInfo
+            title="Cerifications & Education"
+            // description={
+            //   <>
+            //     Here&apos;s a list of certifications that I have achieved.<br/>
+            //   </>
+            // }
+          />
+          <CertificationsAndEducation />
+        </div>
+      </section>
+      <section className="pt-[150px] lg:pt-[300px] relative isolate">
         <div className="absolute inset-0">
 
         </div>

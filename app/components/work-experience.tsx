@@ -28,7 +28,7 @@ const WorkExperience = () => {
     return (
         <div className="mt-12">
             <div className="grid grid-cols-4 gap-8">
-                <div className="col-span-1">
+                <div className="col-span-4 lg:col-span-1">
                     <div className="p-0.5 relative isolate overflow-hidden">
                         {/* for rotaing border effect */}
                         <div className="absolute inset-0 scale-[2] origin-center -z-10 animate-rotating-gradient"></div>
@@ -42,7 +42,7 @@ const WorkExperience = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-3 grid grid-cols-2 gap-6">
+                <div className="col-span-4 lg:col-span-3 grid grid-cols-2 gap-6">
                     {EXPERIENCE.map((experience) => (
                         <WorkExperienceCard key={experience.company} company={experience.company} position={experience.position} duration={experience.duration} jobType={experience.jobType} />
                     ))}

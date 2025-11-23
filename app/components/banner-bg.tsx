@@ -29,7 +29,7 @@ const BannerBg = () => {
 
   return (
     <>
-      <div ref={ref} className="absolute inset-0 -z-10">
+      <div ref={ref} className="hidden lg:block absolute inset-0 -z-10">
         <Image
           src="/svgs/banner-wave-outline.svg"
           alt="Banner wave"

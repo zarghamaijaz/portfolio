@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ProfessionalCard = () => {
     return (
-        <div className="relative isolate bg-[#151515] max-w-[500px] pt-[60px] p-[30px] rounded-2xl overflow-hidden">
+        <div className="relative isolate bg-[#252525] max-w-[500px] pt-[60px] p-[30px] rounded-2xl overflow-hidden">
             {/* background icons & effects */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="absolute w-[220px] h-[220px] border-15 border-dawn-orange rounded-full right-0 top-0 translate-y-[-50%] p-[15px]">

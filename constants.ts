@@ -81,29 +81,29 @@ export const PROJECTS_LIST = [
         href: "/projects/qabool-hai",
     },
     {
-        name: "OneVibe API",
-        description: "A REST API for OneVibe app. Built using Node.js and PostgreSQL.",
+        name: "OneVibe Server",
+        description: "A backend server for OneVibe App. Built with Node.js, Socket.io and PostgreSQL.",
         image: "",
         domain: "API",
-        href: "/",
+        href: "/projects/onevibe",
     },
     {
         name: "Instant Cloud Support",
         description: "A cloud support ticketing system for customers.",
         image: "/images/projects/cloud-support/main.png",
         domain: "IT support platform",
-        href: "/",
+        href: "/projects/instant-cloud-support",
     },
     {
         name: "DU Ticketing and Inventory System",
-        description: "Automated ticketing system for managing support tickets and updating inventory with logs.",
+        description: "Automated ticketing system built for Du Telecom to manage support tickets and updating inventory with logs.",
         image: "/images/projects/mx-du/main.png",
         domain: "Inventory management",
         href: "/",
     },
     {
         name: "Prostore",
-        description: "A fully featured Ecommerce platform. Built with Next.js and TailwindCSS.",
+        description: "An Ecommerce store. Built with Next.js and TailwindCSS. Featuring server-side rendering, server-actions, zod validation and more.",
         image: "/images/projects/prostore/main.png",
         domain: "Ecommerce",
         href: "https://prostore-jzlf.onrender.com/",
@@ -153,6 +153,35 @@ export const EXPERIENCE = [
     },
 ]
 
+export const CERTIFICATIONS = [
+    {
+        title: "Next.js Ecommerce 2025 - Shopping Platform From Scratch",
+        instructor: "Brad Traversy",
+        platform: "Udemy",
+        date: "November 2025",
+        image: "/images/certificates/next-ecommerce.jpg",
+    },
+    {
+        title: "React Node MERN Stack from Scratch building Social Network",
+        instructor: "Ryan Dhungel",
+        platform: "Udemy",
+        date: "February 2024",
+        image: "/images/certificates/next-ecommerce.jpg",
+    },
+]
+export const EDUCATION = [
+    {
+        title: "Bachelor of Science in Information Technology",
+        institution: "Lahore Garrison University",
+        duration: "2016 - 2020",
+    },
+    {
+        title: "ICS (Physics)",
+        institution: "Board of Intermediate & Secondary Education",
+        duration: "2014 - 2016",
+    },
+]
+
 
 export const WHY_HIRE_ME =[
     {
@@ -187,6 +216,11 @@ export const CONTRIBUTION = {
             date: "July 2025",
         },
         {
+            title: "Add multitenant support to all modules",
+            description: "Added multitenant support to all modules so that users can log in from their own credentials and should be able to see data within their organization only.",
+            date: "June 2025",
+        },
+        {
             title: "Multitenant Architecture design",
             description: "The stakeholders requested a multitenant support so that clients can log in from their own credentials and should be able to see assets within their organization only.",
             date: "June 2025",
@@ -199,6 +233,21 @@ export const CONTRIBUTION = {
         {
             title: "Implement Expiry Notifications",
             description: "The stakeholders wanted to be notified when assets are about to expire so they can take action accordingly.",
+            date: "",
+        },
+        {
+            title: "Location Management Module",
+            description: "Developed location management module with CRUD operations.",
+            date: "",
+        },
+        {
+            title: "Group Management Module",
+            description: "Developed group management module to allow users to create groups and assign assets to groups.",
+            date: "",
+        },
+        {
+            title: "Users Management Module",
+            description: "Developed users management module with CRUD operations.",
             date: "",
         },
         {
@@ -235,8 +284,23 @@ export const CONTRIBUTION = {
         },
         {
             title: "Maintain the Frontend",
-            description: "I was required to maintain the Frontend of the application and add new features as they were provided.",
+            description: "I was required to maintain the Frontend of the application and add new features as they were requested.",
             date: "July 2024",
+        },
+        {
+            title: "Role Based Access Control (RBAC)",
+            description: "Implemented Role Based Access Control (RBAC) and added new Spectator role that could only view data and not modify anything.",
+            date: "",
+        },
+        {
+            title: "Stats, Charts and graphs",
+            description: "Added visualization of stats, charts and graphs to the admin dashboard so that admins can make decisions based on the data.",
+            date: "",
+        },
+        {
+            title: "Coupon Management Module",
+            description: "Added a new module for coupon management. The customers can avail special discounts on their purchases using coupons.",
+            date: "",
         },
         {
             title: "Admin Dashboard API Integration",
@@ -273,7 +337,136 @@ export const CONTRIBUTION = {
             description: "The first step was to understand the existing code and identify areas that needed improvement.",
             date: "February 2024",
         },
-    ]
+    ],
+    ONEVIBE: [
+        {
+            title: "Calling feature implementation using Dyte",
+            description: "Fully developed a video calling feature by using socket events and Dyte to allow users to call other users.",
+            date: "November 2025",
+        },
+        {
+            title: "Send Message to Mhannel API",
+            description: "Developed an API to let channel Admins to send messages to channel members.",
+            date: "",
+        },
+        {
+            title: "Channel Module",
+            description: "Fully developed a channel module where users can create channels and invite other users to join them. Users can also follow channels on their own.",
+            date: "",
+        },
+        {
+            title: "Broadcast Messages module",
+            description: "Added a broadcast message module just like WhatsApps broadcast messages. This allowed users to send messages to different people without creating groups.",
+            date: "",
+        },
+        {
+            title: "Poll Messages CRUD",
+            description: "Added poll creation functionality to existing messages module. This allowed users to create polls and vote on them.",
+            date: "",
+        },
+        {
+            title: "Reactions API",
+            description: "Developed a reactions API to allow users to react to message.",
+            date: "October 2025",
+        },
+        {
+            title: "Translation API",
+            description: "Developed a translation API to translate message from one language to another.",
+            date: "",
+        },
+        {
+            title: "Group Management Module",
+            description: "Added a group management module to allow users to create groups and invite other users to join them.",
+            date: "",
+        },
+        {
+            title: "Migrations and Database Schema Design",
+            description: "To add new features, I had to change the database schema. I worked with the lead backend developer to design the database schema and ran migrations.",
+            date: "",
+        },
+        {
+            title: "Created HTTP methods and Socket events",
+            description: "The application uses bothe HTTP methods and Socket events to send and receive messages. So I had to make both HTTP methods and Socket events.",
+            date: "",
+        },
+        {
+            title: "Work on Chat Module",
+            description: "I worked with lead backend developer to develop the chat module.",
+            date: "",
+        },
+        {
+            title: "Code Review",
+            description: "I studied the existing code to better understand the requirements and identify how to proceed with the project.",
+            date: "September 2025",
+        },
+    ],
+    INSTANT_CLOUD_SUPPORT: [
+        {
+            title: "Developed Call queue and wait timer",
+            description: "Developed call queue for the Customer-Care Representatives and added a call wait timer for Customers to know how long they have to wait. The timer gets stored on server side retrieved on client side on every mount to make sure the timer is accurate.",
+            date: "April 2024",
+        },
+        {
+            title: "Developed Calling Feature",
+            description: "Used Dyte with SignalR events to create a fully functional calling feature.",
+            date: "",
+        },
+        {
+            title: "Handled Signal Events",
+            description: "Used context hooks to handle SignalR events.",
+            date: "",
+        },
+        {
+            title: "SignalR Integration",
+            description: "Restructured the application to use SignalR to make the application real-time.",
+            date: "March 2024",
+        },
+        {
+            title: "Task Management Module",
+            description: "Developed task module and integrated it with credit module to sync tasks with credit hours.",
+            date: "",
+        },
+        {
+            title: "Document sharing module",
+            description: "Developed a document sharing module within a service request so files can be better organized.",
+            date: "",
+        },
+        {
+            title: "Comments module",
+            description: "Developed a raltime comments module for better communication between customer and engineers.",
+            date: "",
+        },
+        {
+            title: "Credit Hours Module",
+            description: "Used stripe to allow customers to purchase credit hours that can be consumed when a task is completed.",
+            date: "February 2024",
+        },
+        {
+            title: "API Integration",
+            description: "Integrated the APIs provided by backend team.",
+            date: "",
+        },
+        {
+            title: "Implemented RBAC",
+            description: "Made the application secure by implementing Role Based Access Control (RBAC).",
+            date: "",
+        },
+        {
+            title: "Code Optimization",
+            description: "Made the application optimized for mobile devices.",
+            date: "January 2024",
+        },
+        {
+            title: "Code Refactoring",
+            description: "Converted the application into smaller reusable components.",
+            date: "",
+        },
+        {
+            title: "Layouting and Styling",
+            description: "I started by analyzing Figma designs and creating interfaces for the application.",
+            date: "December 2023",
+        },
+    ],
 }
 
 
@@ -336,6 +529,70 @@ export const FEATURES = {
         {
             title: "Selfie Verification",
             description: "The platform detects the face of the user and allows them to verify their identity by taking a selfie. No fakes are allowed.",
+            image: "",
+        },
+    ],
+    ONEVIBE: [
+        {
+            title: "Posts Module",
+            description: "Onevibe lets the users create posts, photos and videos. It also allows users to like, comment and share posts.",
+            image: "",
+        },
+        {
+            title: "Reels and Stories",
+            description: "The platform lets the users create reels and stories and share them with others.",
+            image: "",
+        },
+        {
+            title: "Chat Module",
+            description: "Onevibe combines all essential chat features into a single robust application to deliver the best experience to its users.",
+            image: "",
+        },
+        {
+            title: "Group Chat Module",
+            description: "Onevibe provides a way to create groups of your favourite friends and chat with them in one place.",
+            image: "",
+        },
+        {
+            title: "Audio/Video Calling",
+            description: "Users can start a video call or audio calls with their friends and family to feel more connected.",
+            image: "",
+        },
+    ],
+    INSTANT_CLOUD_SUPPORT: [
+        {
+            title: "Role Based Access Control (RBAC)",
+            description: "The platform has Role Based Access Control (RBAC) implemented which allows users to have different levels of access based on their roles. There are three primary roles: Customer, Customer-Care Representative, and Expert-Support.",
+            image: "",
+        },
+        {
+            title: "Call Queue Management",
+            description: "The platform lets the Customer-Care Representatives manage call queues and assign tasks to the Expert-Support users.",
+            image: "",
+        },
+        {
+            title: "Service Request Creation",
+            description: "Service Requests works like tickets and can be created by the Customer or Customer-Care Representative (Admins).",
+            image: "",
+        },
+        {
+            title: "Task Creation and Assignment",
+            description: "Each service request can have multiple tasks that can be assigned to Expert-Support users. The progress of the task can be upated by the Expert-Support users. When the progress is updated, the Customer receives Realtime Notifications.",
+            image: "",
+        },
+        {
+            title: "Credit Hours Management",
+            description: "The platform lets the customers purchase credit hours. These credit hours are consumed when a task is completed by Expert-Support users.",
+            image: "",
+        },
+        {
+            title: "Realtime progress tracking",
+            description: "The platform shares realtime project tracking with the customer.",
+            image: "",
+        },
+        {
+            title: "Chat and Video Calling",
+            description: "The customers can start a video call or chat with the Customer-Care Representative (Admins) or Expert-Support users that are directly assigned to their project.",
             image: "",
         },
     ],

@@ -34,7 +34,7 @@ const TechnologyCard = ({name, icon}:{
     return(
         <div ref={ref} className={`bg-gray-800 hover:bg-gray-700 transition-background transition-trnsform duration-200 p-4 rounded-lg flex flex-col items-center ${visible ? "fade-in-pop" : "opacity-0"}`}>
             <Image src={icon} alt={name} width={50} height={50} className="block mb-4" />
-            <h3 className="mt-auto">{name}</h3>
+            <h3 className="mt-auto text-sm lg:text-base">{name}</h3>
         </div>
     )
 }

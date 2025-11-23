@@ -9,6 +9,10 @@ import LetsTalk from "@/app/components/lets-talk";
 
 const { ITAM } = CONTRIBUTION;
 
+export const metadata = {
+    title: "Zargham | ITAM (IT Asset Management)"
+};
+
 const ITAMPage = () => {
   return (
     <>
@@ -17,6 +21,7 @@ const ITAMPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <SectionInfo
+                badge="Asset Management System"
                 title={
                   <>
                     ITAM (IT Asset Management)
@@ -64,7 +69,7 @@ const ITAMPage = () => {
       <section className="pt-[300px]" id="my-contribution">
         <div className="container mx-auto">
           <StyledTitle>My Contribution</StyledTitle>
-          <p className="text-gray-300 text-center mt-4">I have worked on the frontend of the project. From architecturing the UI to implementing the features. As the requirements grew, I scaled the application accordingly. </p>
+          <p className="text-gray-300 text-center mt-4">I have leaded the frontend of the project. From architecturing the UI to implementing the features. As the requirements grew, I scaled the application accordingly. </p>
         </div>
         <div className="mt-[100px]">
           <Timeline data={ITAM}/>

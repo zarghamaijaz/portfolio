@@ -28,7 +28,7 @@ const ProjectsList = () => {
   return (
     <div className="mt-12 relative py-[100px] isolate overflow-hidden">
       <PositionAwareBgEffect/>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12">
         {PROJECTS_LIST.map((project) => (
           <ProjectCard key={project.name} href={project.href} title={project.name} description={project.description} image={project.image} domain={project.domain} />
         ))}
