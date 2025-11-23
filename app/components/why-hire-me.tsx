@@ -2,11 +2,11 @@ import { WHY_HIRE_ME } from "@/constants";
 
 const HireMeCard = ({number, title, description}:{number: number, title: string, description: string}) => {
     return (
-        <div className="bg-elements p-6 border border-gray-700 rounded relative isolate">
+        <div className="bg-elements p-3 lg:p-6 border border-gray-700 rounded relative isolate">
             <div className="absolute inset-0 flex justify-end -z-10">
                 <div className="opacity-5 text-[100px] lg:text-[150px] font-semibold leading-[1em]">{number}</div>
             </div>
-            <h3 className="lg:text-lg font-medium mb-4">{title}</h3>
+            <h3 className="text-sm lg:text-lg font-medium mb-4">{title}</h3>
             <p className="text-gray-300 text-xs lg:text-sm">{description}</p>
         </div>
     )

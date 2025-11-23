@@ -27,7 +27,7 @@ const PositionAwareBgEffect = () => {
     <div ref={boxedRef} className="absolute inset-0 -z-10 flex justify-center items-center">
       <div
         ref={ref}
-        className="absolute h-[400px] w-[400px] rounded-full blur-3xl bg-linear-to-r from-dawn-orange to-dawn-blue opacity-30"
+        className="absolute h-[200px] w-[200px] lg:h-[400px] lg:w-[400px] rounded-full blur-xl lg:blur-3xl bg-linear-to-r from-dawn-orange to-dawn-blue opacity-30"
         style={{ left: `${position.x}px`, top: `${position.y}px` }}
       />
     </div>

@@ -4,9 +4,9 @@ const StyledTitle = ({children}:{
     children: React.ReactNode
 }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center text-center">
       <div>
-        <h2 className="text-4xl text-dawn-orange font-heading mb-3">{children}</h2>
+        <h2 className="text-2xl lg:text-4xl text-dawn-orange font-heading mb-3">{children}</h2>
         <div className="w-full h-1 bg-foreground"></div>
         <div className="w-[50%] mx-auto h-1 bg-foreground mt-2"></div>
       </div>

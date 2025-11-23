@@ -14,7 +14,7 @@ const Header = () => {
                     </Link>
                 </div>
                 <nav className="flex-1">
-                    <ul className="flex gap-6 justify-center items-center">
+                    <ul className="flex gap-3 lg:gap-6 justify-center items-center text-xs lg:text-base">
                         <li>
                             <Link href="/" className="hover:text-cyan-400 hover:underline">Home</Link>
                         </li>
@@ -26,7 +26,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <div className="flex-1 flex justify-center lg:justify-end items-center gap-2">
+                <div className="hidden lg:flex flex-1 justify-center lg:justify-end items-center gap-2">
                     <CopyEmailButton />
                     <Button variant="gradient">Download CV</Button>
                 </div>
