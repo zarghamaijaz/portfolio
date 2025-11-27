@@ -9,14 +9,14 @@ const WorkExperienceCard = ({company, position, duration, jobType}:{
     jobType: string
 }) => {
     return (
-        <div className="bg-elements p-4 border border-gray-700 rounded relative isolate">
+        <div className="bg-elements p-3 lg:p-4 border border-gray-700 rounded relative isolate">
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <div className="h-full w-full animate-shine" style={{background: "linear-gradient(135deg, transparent 40%, #ffffff50 45%, transparent 70%)"}}></div>
             </div>
-            <div className="flex justify-between items-start gap-4">
-                <h3 className="text-lg lg:text-xl">{company}</h3>
-                <div className="bg-cyan-500 text-xs py-1 px-2 rounded-md">{jobType}</div>
+            <div className="flex justify-end">
+                <div className="bg-cyan-500 text-xs py-0.5 lg:py-1 px-2 rounded-md mb-3">{jobType}</div>
             </div>
+            <h3 className="text-lg lg:text-xl">{company}</h3>
             <p className="text-gray-400 text-xs mb-4">{duration}</p>
             <p className="text-dawn-orange text-sm">{position}</p>
         </div>

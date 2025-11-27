@@ -5,18 +5,18 @@ import { PROJECTS_LIST } from "@/constants";
 
 const ProjectCard = ({href, title, description, image, domain}: {href: string, title: string, description: string, image: string, domain: string}) => {
     return(
-        <Link href={href} className="p-4 block w-full relative isolate">
+        <Link href={href} className="p-3 lg:p-4 block w-full relative isolate">
             <div className="absolute inset-0 isolate bg-white rounded-2xl overflow-hidden">
                 {image && (
                     <Image src={image} alt={title} width={300} height={300} className="w-full h-full object-cover blur-[3px]" />
                 )}
                 <div className="bg-linear-to-t from-black to-transparent absolute inset-0 opacity-80"></div>
             </div>
-            <div className="relative z-10">
+            <div className="relative z-10 flex flex-col h-full">
                 <div className="mb-[60px]">
                     <p className="bg-cyan-600 capitalize text-sm py-1 px-2 w-fit rounded-md mb-2">{domain}</p>
                 </div>
-                <h3 className="mb-2 font-medium">{title}</h3>
+                <h3 className="mb-2 font-medium mt-auto">{title}</h3>
                 <p className=" text-sm text-gray-300">{description}</p>
             </div>
         </Link>

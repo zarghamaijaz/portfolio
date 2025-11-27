@@ -467,6 +467,28 @@ export const CONTRIBUTION = {
             date: "December 2023",
         },
     ],
+    DU: [
+        {
+            title: "Helpdesk Module",
+            description: "Created pages and components for Helpdesk users to create flows, track tickets and assign tasks.",
+            date: "",
+        },
+        {
+            title: "Field Engineer Module",
+            description: "Created pages and components for Field Engineers to track and complete their tasks.",
+            date: "",
+        },
+        {
+            title: "Implemented protected routes",
+            description: "Implemented protected routes to make sure only authenticated users can access certain pages.",
+            date: "",
+        },
+        {
+            title: "Initial Setup",
+            description: "Created a React.js project and installed required dependencies. Used React Router to create a multi-page application. Used Redux for state management.",
+            date: "January 2023",
+        },
+    ]
 }
 
 
